@@ -1,0 +1,44 @@
+﻿@using BlazorDB.Data;
+@using BlazorDB.Data.INTERFACES
+
+
+@inject ICITYSERVICES CityService 
+@inject NavigationManager NavigationManager 
+@page "/addcities"
+
+<h3>AJouter une ville</h3>
+<hr />
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Name" class="custom-control-label">Name</label>
+                <input name="Name" class="form-control" @bind="@city.name" />
+                <label for="State" class="custom-control-label">State</label>
+                <input name="State" class="form-control" @bind="@city.state" />
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" @onclick="@CreeteCity" value="Save" />
+                <input type="button" class="btn btn-primary" @onclick="@fermer" value="Fermer" />
+            </div>
+        </div>
+    </div>
+</form>
+
+@code {
+    City city = new City();
+    protected async Task CreeteCity()
+    {
+        await CityService.CreateCity(city);
+        NavigationManager.NavigateTo("listcities");
+    }
+    void fermer()
+    {
+        NavigationManager.NavigateTo("LISTECITIES");
+    }
+}
