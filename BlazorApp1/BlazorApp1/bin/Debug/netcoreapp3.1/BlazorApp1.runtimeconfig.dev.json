@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\EXAUCE\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\EXAUCE\\.nuget\\packages"
+    ]
+  }
+}
