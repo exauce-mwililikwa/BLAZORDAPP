@@ -1,0 +1,50 @@
+﻿
+@using BlazorDB.Data
+@using BlazorDB.Data.INTERFACES
+@inject ICITYSERVICES CityService
+@inject NavigationManager NavigationManager
+@page "/editcity/{id:int}"
+<h3>MODIFICATION</h3>
+<hr />
+
+@if (city == null)
+{
+    <p>Loadind...</p>
+}
+else
+{
+
+
+
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Name" class="custom-control-label">Name</label>
+                <input form="Name" class="form-control" @bind="@city.name" />
+                <label for="Name" class="custom-control-label">Name</label>
+                <input form="Name" class="form-control" @bind="@city.state" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" @onclick="@UpdateCity" value="Modifier" />
+        </div>
+    </div>
+</form>
+}
+@code {
+    [Parameter]
+    public int id { get; set; }
+    City city = new City();
+    protected override async Task OnInitializedAsync()
+    {
+        city = await CityService.SingleCity(id);
+    }
+    protected async Task UpdateCity()
+    {
+        await CityService.EditCity(id, city);
+        NavigationManager.NavigateTo("listcities");
+    }
+}

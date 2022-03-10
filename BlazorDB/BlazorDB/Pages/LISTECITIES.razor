@@ -5,7 +5,7 @@
 @inject ICITYSERVICES CityService
 
 <h2>List des Villes</h2>
-<a href="/addcity">Ajouter une ville</a>
+<a href="/addcities">Ajouter une ville</a>
 @if (cities == null)
 {
     <p>loading...</p>
@@ -27,7 +27,7 @@ else
                     <td>@city.name</td>
                     <td>@city.state</td>
                     <td>
-                        <a class="btn btn-info" href="#">Edit</a>
+                        <a class="btn btn-info" href="/editcity/@city.id">Edit</a>
                         <a class="btn btn-danger" href="#">Delete</a>
                     </td>
                 </tr>
