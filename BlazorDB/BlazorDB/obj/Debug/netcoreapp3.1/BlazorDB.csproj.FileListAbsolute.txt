@@ -116,8 +116,6 @@ C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\bin\Debug\netcoreapp3.
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.csprojAssemblyReference.cache
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.AssemblyInfoInputs.cache
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.AssemblyInfo.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.csproj.CoreCompileInputs.cache
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.RazorComponent.input.cache
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\RazorDeclaration\App.razor.g.cs
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\AddCity.razor.g.cs
@@ -129,20 +127,9 @@ C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\NavMenu.razor.g.cs
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\RazorDeclaration\_Imports.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\RazorDeclaration\BlazorDB.dll
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.TagHelpers.input.cache
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.TagHelpers.output.cache
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.RazorCoreGenerate.cache
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\App.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Pages\AddCity.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Pages\Counter.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Pages\FetchData.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Pages\Index.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Pages\LISTECITIES.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Shared\NavMenu.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Shared\SurveyPrompt.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\_Imports.razor.g.cs
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Pages\Error.cshtml.g.cs
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Pages\_Host.cshtml.g.cs
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.RazorAssemblyInfo.cache
@@ -157,4 +144,4 @@ C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.pdb
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\BlazorDB.genruntimeconfig.cache
 C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\EDITCITY.razor.g.cs
-C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\Razor\Pages\EDITCITY.razor.g.cs
+C:\Users\EXAUCE\source\repos\BLAZORDAPP\BlazorDB\BlazorDB\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\DeleteCity.razor.g.cs

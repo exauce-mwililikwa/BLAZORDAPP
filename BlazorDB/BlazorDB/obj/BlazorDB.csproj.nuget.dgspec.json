@@ -45,6 +45,10 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[3.0.1, )"
+            },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[3.13.1, )"
             }
           },
           "imports": [
