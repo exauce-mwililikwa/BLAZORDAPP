@@ -32,6 +32,7 @@ namespace BlazorDB
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddScoped<ICITYSERVICES, CITYSERVICE>();
+            services.AddScoped<IEMPOYEESERVICE, EMPLOYESERVICE>();
             var sqlConnectionConfiguration = new SqlConnectionConfiguration(Configuration.GetConnectionString("SqlDbContext"));
             services.AddSingleton(sqlConnectionConfiguration);
             services.AddServerSideBlazor(o => o.DetailedErrors = true);

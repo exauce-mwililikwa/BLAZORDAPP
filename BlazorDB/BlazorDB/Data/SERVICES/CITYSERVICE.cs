@@ -4,7 +4,6 @@ using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace BlazorDB.Data.SERVICES
@@ -18,14 +17,16 @@ namespace BlazorDB.Data.SERVICES
         }
         public async Task<bool> CreateCity(City city)
         {
-          using(var conn=new SqlConnection(_Configuration.value))
+            using (var conn = new SqlConnection(_Configuration.value))
             {
                 const string query = @"insert into city(name,state) values(@name,@state)";
                 if (conn.State == System.Data.ConnectionState.Closed) conn.Open();
-                try {
+                try
+                {
                     await conn.ExecuteAsync(query, new { city.name, city.state }, commandType: System.Data.CommandType.Text);
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     throw ex;
                 }
                 finally
@@ -38,7 +39,7 @@ namespace BlazorDB.Data.SERVICES
 
         public async Task<bool> DeleteCity(int id)
         {
-          using (var conn=new SqlConnection(_Configuration.value))
+            using (var conn = new SqlConnection(_Configuration.value))
             {
                 const string query = @"delete from dbo.city where id=@id";
                 //on utilise SQLConnection avec la chaine de connexion en parametre
@@ -48,9 +49,9 @@ namespace BlazorDB.Data.SERVICES
                 }
                 try
                 {
-                await conn.ExecuteAsync(query, new { id }, commandType: CommandType.Text);
+                    await conn.ExecuteAsync(query, new { id }, commandType: CommandType.Text);
                 }
-                catch(Exception ex) { throw ex; }
+                catch (Exception ex) { throw ex; }
                 finally
                 {
                     if (conn.State == ConnectionState.Open) conn.Close();
@@ -67,7 +68,7 @@ namespace BlazorDB.Data.SERVICES
                 if (conn.State == ConnectionState.Closed) conn.Open();
                 try
                 {
-                  await  conn.ExecuteAsync(query, new { city.name, city.state, city.id }, commandType: CommandType.Text);
+                    await conn.ExecuteAsync(query, new { city.name, city.state, city.id }, commandType: CommandType.Text);
                 }
                 catch (Exception ex)
                 {
@@ -79,22 +80,23 @@ namespace BlazorDB.Data.SERVICES
                 }
             }
             return true;
-            
+
         }
-            
-       
+
+
 
         public async Task<IEnumerable<City>> GetCities()
         {
             IEnumerable<City> cities;
-            using (var conn=new SqlConnection(_Configuration.value))
+            using (var conn = new SqlConnection(_Configuration.value))
             {
                 const string query = @"select * from dbo.city";
                 if (conn.State == ConnectionState.Closed) conn.Open();
-                try {
-                  cities= await conn.QueryAsync<City>(query);
+                try
+                {
+                    cities = await conn.QueryAsync<City>(query);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     throw ex;
                 }
@@ -109,14 +111,15 @@ namespace BlazorDB.Data.SERVICES
         public async Task<City> SingleCity(int id)
         {
             City city = new City();
-            using (var conn =new SqlConnection(_Configuration.value))
+            using (var conn = new SqlConnection(_Configuration.value))
             {
                 const string query = @"select * from city where id=@id";
                 if (conn.State == ConnectionState.Closed) conn.Open();
-                try {
+                try
+                {
                     city = await conn.QueryFirstOrDefaultAsync<City>(query, new { id }, commandType: CommandType.Text);
                 }
-                catch (Exception ex) { }
+                catch (Exception ex) { throw ex; }
                 finally
                 {
 

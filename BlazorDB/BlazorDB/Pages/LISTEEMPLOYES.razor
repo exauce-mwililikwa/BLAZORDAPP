@@ -1,0 +1,45 @@
+﻿@using BlazorDB.Data
+@using BlazorDB.Data.INTERFACES
+@inject IEMPOYEESERVICE emplayeservice
+<h3>LISTE DES EMPLOYES</h3>
+<a href="/enregistrer_employees">AJOUTER UN EMPLOYE</a>
+@page "/liste_des_employees"
+@if (employees == null)
+{
+    <p>En cours de chargement...</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+        <th>Name</th>
+        <th>Departement</th>
+        <th>Designation</th>
+        <th>Company</th>
+        <th>City</th>
+        </thead>
+        <tbody>
+            @foreach (var e in employees)
+            {
+                <tr>
+                    <td>@e.name</td>
+                    <td>@e.departement</td>
+                    <td>@e.designation</td>
+                    <td>@e.company</td>
+                    <td>@e.cityname</td>
+                    <td>
+                        <a href="">Edit</a>
+                        <a href="">Detele</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+@code {
+    IEnumerable<EmployeeModel> employees;
+    protected override async Task OnInitializedAsync()
+    {
+        employees = await emplayeservice.GetEmployees();
+    }
+}

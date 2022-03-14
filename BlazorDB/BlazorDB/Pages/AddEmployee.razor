@@ -1,0 +1,37 @@
+﻿@using BlazorDB.Data
+@using BlazorDB.Data.INTERFACES
+@page "/enregistrer_employee"
+@inject NavigationManager NavigationManager
+@inject IEMPOYEESERVICE empservice
+@inject ICITYSERVICES cityservice
+@page "/enregistrer_employees"
+<h3>Ajouter un employee</h3>
+<hr />
+<form>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="Name" class="custom-control-label">Name</label>
+                <input for="Name" />
+            </div>
+        </div>
+    </div>
+</form>
+@code {
+    Employee employee = new Employee();
+    IEnumerable<City> cities = new List<City>();
+    protected override async Task OnInitializedAsync()
+    {
+        cities = await cityservice.GetCities();
+    }
+    protected async Task Enregistrer()
+    {
+        await empservice.CreateEmployee(employee);
+        NavigationManager.NavigateTo("liste_des_employees");
+    }
+    void cancel()
+    {
+
+        NavigationManager.NavigateTo("liste_des_employees");
+    }
+}
